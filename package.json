@@ -1,0 +1,18 @@
+{
+  "name": "qcx-frontend-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ederdeivid/qcx-frontend-challenge.git",
+  "author": "Eder Deivid <ederdeivid89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "webpack": "^5.11.1"
+  }
+}
