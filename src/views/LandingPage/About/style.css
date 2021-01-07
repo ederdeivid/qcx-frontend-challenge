@@ -24,3 +24,15 @@ h1.about__title {
 .about__main p {
   text-indent: 3ch
 }
+
+@media screen and (max-width: 768px) {
+  .about__main .about__me__content {
+    width: 90%;
+    font-size : 18px;
+  }
+
+  h1.about__title {
+    padding : 5vh 0;
+    font-size: 4vw;
+  }
+}
