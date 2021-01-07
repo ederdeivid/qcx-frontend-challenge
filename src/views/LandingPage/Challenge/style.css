@@ -1,0 +1,97 @@
+.challenge {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 100%;
+  height          : 100vh;
+  background-color: rgba(154 238 191 / 0.17);
+}
+
+.challenge__card {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : flex-end;
+  min-width       : 45vw;
+  height          : 33vh;
+  background-color: #fff;
+  box-shadow      : 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.challenge__avatar {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  margin-left    : 20px;
+  width          : 200px;
+  height         : 100%;
+}
+
+.challenge__avatar .avatar__img {
+  background-image: url("https://avatars1.githubusercontent.com/u/22370626?");
+  background-size : cover;
+  width           : 100%;
+  height          : 63%;
+  border-radius   : 100%;
+}
+
+.challenge__profile__name {
+  cursor         : pointer;
+  font-size      : 18px;
+  font-family    : "Dosis";
+  color          : #2d69ba;
+  letter-spacing : 1px;
+  text-transform : uppercase;
+  text-decoration: underline;
+  transition     : 0.3s ease-out;
+}
+
+.challenge__profile__name:hover {
+  transition     : 0.3s ease-in;
+  text-decoration: none;
+  color          : #001bff;
+}
+
+.challenge__user__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width : calc(90% - 200px);
+  height: 80%;
+}
+
+.challenge__user__info ul {
+  list-style: none;
+}
+
+.challenge__user__info li {
+  font-family   : "Dosis";
+  font-size     : 18px;
+  text-transform: uppercase;
+  margin        : 5px;
+}
+
+.challenge__options span {
+  padding: 10px;
+  font-family: "Dosis";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid rgba(154 238 191 / 1);
+  border-radius: 3px;
+  color: #008000;
+}
+
+.challenge__options span:hover {
+  color: #000;
+  background-color: rgba(154 238 191 / 0.17);
+  border: none;
+  box-shadow: 0 0 2px #008000;
+}
+
+.challenge__options span:active {
+  border: none;
+}
+.challenge__options span:visited {
+  border: none;
+}

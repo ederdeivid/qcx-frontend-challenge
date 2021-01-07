@@ -3,7 +3,7 @@ const browser = require('browser-sync')
 const concat = require('gulp-concat')
 const gulp = require('gulp')
 
-const unawalledFolders = ['!./node_modules/**', '!./dist/**', '!./gulpfile.js']
+const unawalledFolders = ['!./node_modules/**', '!./dist/**', '!./gulpfile.js', '!**/services/**']
 const server = browser.create()
 const paths = {
   scripts: {
