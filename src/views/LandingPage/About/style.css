@@ -1,6 +1,6 @@
 @font-face {
   font-family: Dosis;
-  src        : url('./Dosis.ttf');
+  src        : url('./font/Dosis.ttf');
 }
 
 .about__main {
@@ -15,10 +15,10 @@ h1.about__title {
 }
 
 .about__main .about__me__content {
-  width        : 69%;
-  margin       : 0 auto;
-  font-size    : 18px;
-  font-family  : Dosis;
+  width      : 69%;
+  margin     : 0 auto;
+  font-size  : 18px;
+  font-family: Dosis;
 }
 
 .about__main p {
@@ -27,12 +27,12 @@ h1.about__title {
 
 @media screen and (max-width: 768px) {
   .about__main .about__me__content {
-    width: 90%;
-    font-size : 18px;
+    width    : 90%;
+    font-size: 18px;
   }
 
   h1.about__title {
-    padding : 5vh 0;
+    padding  : 5vh 0;
     font-size: 4vw;
   }
 }

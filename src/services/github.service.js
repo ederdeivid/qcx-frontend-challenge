@@ -14,7 +14,14 @@ const infoUser = async (username) => axios.get(`${API}/${username}`)
  */
 const starredRepos = async (username) => axios.get(`${API}/${username}/starred?types=owner`)
 
+/**
+ * Search public repos of an user
+ * @param { string } username 
+ */
+const repos = async (username) => axios.get(`${API}/${username}/repos`)
+
 module.exports = {
   starredRepos,
-  infoUser
+  infoUser,
+  repos
 }

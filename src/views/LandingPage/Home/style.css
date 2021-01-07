@@ -2,12 +2,13 @@
   z-index          : 1;
   height           : 100vh;
   width            : 100%;
-  background-image : url('./bg-home.jpg');
+  background-image : url('./img/bg-home.jpg');
   background-size  : cover;
   background-repeat: no-repeat;
 }
 
 .home__text__info {
+  font-family     : "Dosis";
   width           : 100%;
   height          : 100vh;
   background-color: rgba(0, 0, 0, 0.75);
