@@ -43,3 +43,25 @@ nav {
 .nav__mobile__button {
   display: none;
 }
+
+.nav__mobile__button div {
+  width           : 25px;
+  height          : 3px;
+  background-color: rgb(226, 226, 226);
+  margin          : 5px;
+  /* transition      : all 0.3s ease; */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav__options, .nav__myname {
+    display: none;
+  }
+
+  .nav__mobile__button {
+    display: block;
+  }
+}
