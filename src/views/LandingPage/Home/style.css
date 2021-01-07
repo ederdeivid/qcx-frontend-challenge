@@ -1,0 +1,41 @@
+.home__bg {
+  z-index          : 1;
+  height           : 100vh;
+  width            : 100%;
+  background-image : url('./bg-home.jpg');
+  background-size  : cover;
+  background-repeat: no-repeat;
+}
+
+.home__text__info {
+  width           : 100%;
+  height          : 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.home__text__info {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  text-align     : center;
+}
+
+.home__text__info>h1 {
+  font-size: 4vw;
+  color    : #fff;
+}
+
+.home__text__info>span {
+  font-size: 2vw;
+  color    : #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .home__text__info>h1 {
+    font-size: calc(4vw * 1.6);
+  }
+
+  .home__text__info>span {
+    font-size: calc(2vw * 1.6);
+  }
+}

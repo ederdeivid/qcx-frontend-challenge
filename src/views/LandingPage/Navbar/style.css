@@ -1,4 +1,6 @@
 nav {
+  z-index         : 9;
+  position        : absolute;
   top             : 0;
   width           : 100%;
   display         : flex;
@@ -9,7 +11,7 @@ nav {
 }
 
 .nav__myname {
-  color         : #000;
+  color         : #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size     : 20px;
@@ -21,7 +23,6 @@ nav {
   justify-content: flex-end;
   width          : 30%;
 }
-
 
 .nav__options li:not(:last-child) {
   margin: 0 2vw;
@@ -36,10 +37,10 @@ nav {
 }
 
 .nav__options a {
-  color          : #000;
+  color          : #fff;
+  font-size      : 14px;
   text-decoration: none;
   letter-spacing : 2px;
-  font-size      : 14px;
 }
 
 .nav__mobile__button {
@@ -47,15 +48,21 @@ nav {
 }
 
 .nav__mobile__button div {
+  background-color: #ccc;
   width           : 25px;
   height          : 3px;
-  background-color: rgb(226, 226, 226);
   margin          : 5px;
 }
 
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+
+  nav {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 0 20px;
   }
 
   .nav__options {
@@ -79,12 +86,12 @@ nav {
   }
 
   .nav__options a {
-    height           : calc(100% - 1px);
-    box-shadow       : 0 0 5px #00000014;
-    display          : flex;
-    justify-content  : center;
-    flex-direction   : column;
-    text-align       : center;
+    height         : calc(100% - 1px);
+    box-shadow     : 0 0 5px #00000014;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    text-align     : center;
   }
 
   .nav__options li:hover {

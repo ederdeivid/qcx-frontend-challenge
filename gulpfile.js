@@ -47,12 +47,13 @@ const includeHTML = async () => {
 }
 
 const reload = () => server.reload()
-// const copyAssets = () => gulp.src(['./src/assets/**/*']).pipe(gulp.dest(paths.scripts.dest))
+const copyAssets = () => gulp.src(['./src/assets/**']).pipe(gulp.dest(paths.scripts.dest))
 
 const buildAndReload = async () => {
   return new Promise(async (resolve, reject) => {
     try {
       await includeHTML()
+      copyAssets()
       reload()
     } catch (err) {
       console.error(err)
