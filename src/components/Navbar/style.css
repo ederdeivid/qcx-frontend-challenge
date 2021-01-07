@@ -16,10 +16,12 @@ nav {
 }
 
 .nav__options {
+  cursor         : pointer;
   display        : flex;
   justify-content: flex-end;
   width          : 30%;
 }
+
 
 .nav__options li:not(:last-child) {
   margin: 0 2vw;
@@ -49,7 +51,6 @@ nav {
   height          : 3px;
   background-color: rgb(226, 226, 226);
   margin          : 5px;
-  /* transition      : all 0.3s ease; */
 }
 
 @media screen and (max-width: 768px) {
@@ -57,11 +58,44 @@ nav {
     overflow-x: hidden;
   }
 
-  .nav__options, .nav__myname {
-    display: none;
+  .nav__options {
+    position        : fixed;
+    right           : 0px;
+    height          : 92vh;
+    top             : 8vh;
+    background-color: #943131;
+    display         : flex;
+    justify-content : center;
+    flex-direction  : column;
+    width           : 50%;
+    transform       : translateX(100%);
+    transition      : transform 0.5s ease-in;
+  }
+
+  .nav__options li {
+    height: 100%;
+    width : 100%;
+    margin: 0px !important;
+  }
+
+  .nav__options a {
+    height           : calc(100% - 1px);
+    box-shadow       : 0 0 5px #00000014;
+    display          : flex;
+    justify-content  : center;
+    flex-direction   : column;
+    text-align       : center;
+  }
+
+  .nav__options li:hover {
+    background-color: rgba(204, 204, 204, 0.5);
   }
 
   .nav__mobile__button {
     display: block;
   }
+}
+
+.showing__mobile {
+  transform: translateX(0%);
 }
