@@ -1,5 +1,6 @@
 .challenge {
   display         : flex;
+  flex-direction  : column;
   justify-content : center;
   align-items     : center;
   width           : 100%;
@@ -7,14 +8,17 @@
   background-color: rgba(154 238 191 / 0.17);
 }
 
-.challenge__card {
-  display         : flex;
-  justify-content : space-between;
-  align-items     : flex-end;
-  min-width       : 45vw;
-  height          : 33vh;
+.challenge__content {
   background-color: #fff;
   box-shadow      : 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.challenge__card {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : flex-end;
+  min-width      : 45vw;
+  height         : 33vh;
 }
 
 .challenge__avatar {
@@ -28,7 +32,6 @@
 }
 
 .challenge__avatar .avatar__img {
-  background-image: url("https://avatars1.githubusercontent.com/u/22370626?");
   background-size : cover;
   width           : 100%;
   height          : 63%;
@@ -53,11 +56,11 @@
 }
 
 .challenge__user__info {
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
   justify-content: space-around;
-  width : calc(90% - 200px);
-  height: 80%;
+  width          : calc(90% - 200px);
+  height         : 80%;
 }
 
 .challenge__user__info ul {
@@ -72,26 +75,58 @@
 }
 
 .challenge__options span {
-  padding: 10px;
-  font-family: "Dosis";
-  font-weight: bold;
-  text-transform: uppercase;
+  cursor          : pointer;
+  padding         : 10px;
+  font-family     : "Dosis";
+  font-weight     : bold;
+  text-transform  : uppercase;
   background-color: transparent;
-  border: 2px solid rgba(154 238 191 / 1);
-  border-radius: 3px;
-  color: #008000;
+  border          : 2px solid rgba(154 238 191 / 1);
+  border-radius   : 3px;
+  color           : #008000;
 }
 
 .challenge__options span:hover {
-  color: #000;
   background-color: rgba(154 238 191 / 0.17);
-  border: none;
-  box-shadow: 0 0 2px #008000;
+  box-shadow      : 0 0 2px #008000;
+  color           : #000;
+  border          : none;
 }
 
-.challenge__options span:active {
-  border: none;
+.challenge__hr {
+  width           : 90%;
+  height          : 1px;
+  margin          : 0 auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  display         : block;
 }
-.challenge__options span:visited {
-  border: none;
+
+.challenge__hidden__menu {
+  overflow-y    : auto;
+  min-width     : 45vw;
+  height        : 20vh;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+}
+
+.challenge__hidden__menu__content {
+  width : 95%;
+  height: 100%;
+}
+
+.repo__list {
+  width: 100%;
+}
+
+.repo__list tr {
+  width: 100%;
+}
+
+.repo__list tr td {
+  padding: 10px;
+}
+
+.repo__list tr:nth-child(2n + 1) {
+  background-color: rgba(154 238 191 / 0.40);
 }
