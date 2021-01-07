@@ -70,6 +70,7 @@ const startServer = async () => {
           baseDir: paths.scripts.dest
         }
       })
+      buildAndReload()
       gulp.watch(
         ['**/*', ...unawalledFolders],
         gulp.series((done) => {

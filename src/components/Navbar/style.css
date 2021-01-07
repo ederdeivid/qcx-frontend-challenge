@@ -1,0 +1,46 @@
+nav {
+  top             : 0;
+  width           : 100%;
+  display         : flex;
+  justify-content : space-around;
+  align-items     : center;
+  min-height      : 8vh;
+  background-color: transparent;
+}
+
+.nav__myname {
+  color         : #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size     : 20px;
+}
+
+.nav__options {
+  display        : flex;
+  justify-content: flex-end;
+  text-align     : right;
+  width          : 30%;
+}
+
+.nav__options li:not(:last-child) {
+  margin: 0 2vw;
+}
+
+.nav__options li:last-child {
+  margin: 0 0 0 2vw;
+}
+
+.nav__options li {
+  list-style: none;
+}
+
+.nav__options a {
+  color          : #000;
+  text-decoration: none;
+  letter-spacing : 2px;
+  font-size      : 14px;
+}
+
+.nav__mobile__button {
+  display: none;
+}

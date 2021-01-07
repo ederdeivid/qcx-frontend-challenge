@@ -5,6 +5,9 @@
   "repository": "https://github.com/ederdeivid/qcx-frontend-challenge.git",
   "author": "Eder Deivid <ederdeivid89@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "gulp"
+  },
   "dependencies": {
     "axios": "^0.21.1"
   },
