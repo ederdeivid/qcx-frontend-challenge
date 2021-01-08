@@ -1,4 +1,4 @@
-# QCX Front-End Desafio
+# QCX Front-End Challenge
 
 ## Project setup
 
