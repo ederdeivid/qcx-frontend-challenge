@@ -32,6 +32,10 @@ h1.about__title {
     font-size: 18px;
   }
 
+  .about__main {
+    padding-top: 8vh;
+  }
+
   h1.about__title {
     padding  : 5vh 0;
     font-size: 4vw;

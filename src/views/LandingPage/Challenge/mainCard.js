@@ -1,13 +1,14 @@
-const githubService = require('../../../services/github.service')
+const { infoUser } = require('../../../services/github.service')
+const { username} = require('../../../../config')
+const { addLoading } = require('./repos')
 
-const mounted = () => window.addEventListener('DOMContentLoaded', () => searchOnMount('ederdeivid'))
+const mounted = () => window.addEventListener('DOMContentLoaded', () => searchOnMount(username))
 
 const searchOnMount = async (username) => {
   return new Promise(async (resolve, reject) => {
     addLoading()
     try {
-      const { data } = await githubService.infoUser(username)
-
+      const { data } = await infoUser(username)
       showUserInfoInTable(data)
       resolve('ok')
     } catch (err) {
@@ -20,15 +21,7 @@ const searchOnMount = async (username) => {
 
 const openGitProfile = () => {
   const btnProfile = document.querySelector('.challenge__profile__name')
-  btnProfile.addEventListener('click', () => window.open('https://github.com/ederdeivid', '_blank'))
-}
-
-const addLoading = () => {
-  const card = document.querySelector('.challenge__card')
-  const iElement = document.querySelector('.challenge__i')
-  iElement.classList.toggle('icon-loading')
-  iElement.classList.toggle('animate-spin')
-  card.classList.toggle('on__loading')
+  btnProfile.addEventListener('click', () => window.open(`https://github.com/${username}`, '_blank'))
 }
 
 const showUserInfoInTable = ({ avatar_url, ...rest }) => {

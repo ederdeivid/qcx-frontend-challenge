@@ -11,12 +11,12 @@
   display        : flex;
   justify-content: center;
   align-items    : center;
-  height         : 5%;
+  height         : 10vh;
 }
 
 .bg__text {
   width          : 100%;
-  height         : 95%;
+  height         : 90vh;
   display        : flex;
   flex-direction : column;
   justify-content: center;
@@ -40,9 +40,38 @@
   color    : #fff;
 }
 
+.home__social i {
+  margin   : 10px;
+  color    : #fff;
+  font-size: 2em;
+}
+
+.home__social i:hover {
+  cursor: pointer;
+}
+
+.home__social i.icon-linkedin:hover {
+  color: #0a66c2;
+}
+
+.home__social i.icon-github:hover {
+  color: #000;
+}
+
+.home__social i.icon-instagram:hover {
+  background             : radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip        : text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 768px) {
-  .about__main {
-    padding-top: 8vh;
+  .bg__text {
+    height: 75vh;
+  }
+
+  .home__social {
+    height: 25vh;
   }
 
   .bg__text>h1 {

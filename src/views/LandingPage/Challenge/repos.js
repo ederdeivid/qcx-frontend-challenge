@@ -1,17 +1,18 @@
-const githubService = require('../../../services/github.service')
+const { repos, starredRepos } = require('../../../services/github.service')
+const { username } = require('../../../../config')
 
 const watchButtons = () => {
   const repo = document.querySelector('.show__repo')
   const starred = document.querySelector('.show__starred')
-  repo.addEventListener('click', () => showRepositories('ederdeivid'))
-  starred.addEventListener('click', () => showStarred('ederdeivid'))
+  repo.addEventListener('click', () => showRepositories(username))
+  starred.addEventListener('click', () => showStarred(username))
 }
 
 const showRepositories = async (username) => {
   return new Promise(async (resolve, reject) => {
     addLoading()
     try {
-      const { data } = await githubService.repos(username)
+      const { data } = await repos(username)
       addItemsToTable(data)
       resolve(data)
     } catch (err) {
@@ -27,7 +28,7 @@ const showStarred = async (username) => {
   return new Promise(async (resolve, reject) => {
     addLoading()
     try {
-      const { data } = await githubService.starredRepos(username)
+      const { data } = await starredRepos(username)
       addItemsToTable(data)
       resolve(data)
     } catch (err) {
@@ -58,7 +59,13 @@ const clearBeforeAdd = (reposName) => {
   reposName.map(x => elTable.deleteRow(0))
 }
 
-const addLoading = () => {}
+export const addLoading = () => {
+  const card = document.querySelector('.challenge__card')
+  const iElement = document.querySelector('.challenge__i')
+  iElement.classList.toggle('icon-loading')
+  iElement.classList.toggle('animate-spin')
+  card.classList.toggle('on__loading')
+}
 
 const makeElementVisible = () => document.querySelector('.challenge__hidden__menu').classList.add('show__menu')
 
