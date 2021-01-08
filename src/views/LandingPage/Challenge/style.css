@@ -1,11 +1,17 @@
 .challenge {
   display         : flex;
   flex-direction  : column;
-  justify-content : center;
+  justify-content : end;
   align-items     : center;
+  padding-top     : 10vh;
   width           : 100%;
   height          : 100vh;
   background-color: rgba(154 238 191 / 0.17);
+}
+
+.challenge>h1 {
+  font-family: "Dosis";
+  padding    : 5vh;
 }
 
 .challenge__content {
@@ -170,6 +176,18 @@
     align-items    : center;
     width          : 85vw;
     height         : 55vh;
+  }
+
+  .challenge>h1 {
+    display: none;
+  }
+
+  .challenge {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    padding-top    : 0;
   }
 
   .challenge__avatar {
