@@ -22,7 +22,6 @@
 }
 
 .challenge__avatar {
-  z-index        : 1;
   display        : flex;
   flex-direction : column;
   align-items    : center;
@@ -117,7 +116,7 @@
 }
 
 .hidden__menu__title {
-  font-family : "Dosis";
+  font-family: "Dosis";
 }
 
 .repo__list {
@@ -129,8 +128,8 @@
 }
 
 .repo__list tr td {
-  padding: 10px;
-  font-family : "Dosis";
+  padding    : 10px;
+  font-family: "Dosis";
 }
 
 .repo__list tr:nth-child(2n + 1) {
@@ -157,4 +156,57 @@
 .show__menu {
   height    : 20vh;
   transition: 0.3s ease-in;
+}
+
+.challenge__hr.user__info {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .challenge__card {
+    display        : flex;
+    flex-direction : column;
+    justify-content: flex-end;
+    align-items    : center;
+    width          : 85vw;
+    height         : 55vh;
+  }
+
+  .challenge__avatar {
+    display        : flex;
+    justify-content: end;
+    padding-top    : 10px;
+    margin         : 0;
+    width          : 80%;
+    height         : 36%;
+  }
+
+  .challenge__avatar .avatar__img {
+    background-size: cover;
+    width          : 50%;
+    height         : 80%;
+    border-radius  : 100%;
+  }
+
+  .challenge__user__info {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    width          : 80%;
+    height         : 30vh;
+  }
+
+  .challenge__hr.user__info {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 769px) {
+  .challenge__card {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : flex-end;
+    width          : 70vw;
+    height         : 33vh;
+  }
 }
