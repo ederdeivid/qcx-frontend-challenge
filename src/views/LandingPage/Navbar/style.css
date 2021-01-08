@@ -1,14 +1,13 @@
 nav {
-  z-index         : 9;
   font-family     : "Dosis";
-  position        : absolute;
+  position        : fixed;
   top             : 0;
   width           : 100%;
+  height          : 8vh;
   display         : flex;
   justify-content : space-around;
   align-items     : center;
-  min-height      : 8vh;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav__myname {
@@ -64,6 +63,11 @@ nav {
     display        : flex;
     justify-content: space-between;
     padding        : 0 20px;
+    box-shadow     : 0 0 10px #000;
+  }
+
+  .showing__mobile {
+    z-index: 1;
   }
 
   .nav__options {
@@ -71,7 +75,7 @@ nav {
     right           : 0px;
     height          : 92vh;
     top             : 8vh;
-    background-color: #943131;
+    background-color: rgba(0, 0, 0, 0.5);
     display         : flex;
     justify-content : center;
     flex-direction  : column;
@@ -88,6 +92,8 @@ nav {
 
   .nav__options a {
     height         : calc(100% - 1px);
+    font-weight    : bold;
+    font-size      : 20px;
     box-shadow     : 0 0 5px #00000014;
     display        : flex;
     justify-content: center;

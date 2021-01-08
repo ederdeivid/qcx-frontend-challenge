@@ -32,6 +32,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .about__main {
+    padding-top: 8vh;
+  }
+
   .home__text__info>h1 {
     font-size: calc(4vw * 1.6);
   }

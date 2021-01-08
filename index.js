@@ -1,10 +1,11 @@
-const mobileOptions = () => {
-  const mobileButton = document.querySelector('.nav__mobile__button')
-  const navOptions = document.querySelector('.nav__options')
+const navOptions = document.querySelector('.nav__options')
+const elements = ['.nav__mobile__button', '.nav__options']
 
-  mobileButton.addEventListener('click', () => {
-    navOptions.classList.toggle('showing__mobile')
-  })
+const mobileOptions = () => elements.map(element => toggle(element, 'toggle'))
+
+const toggle = (element, action) => {
+  const el = document.querySelector(element)
+  el.addEventListener('click', () => navOptions.classList[action]('showing__mobile'))
 }
 
 mobileOptions()

@@ -1,0 +1,10 @@
+main {
+  scroll-snap-type: block mandatory;
+  overflow        : auto;
+  height          : 100vh;
+  width           : 100%;
+}
+
+main>section:not(:first-child) {
+  scroll-snap-align: start;
+}

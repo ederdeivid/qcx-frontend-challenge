@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Dosis;
+  font-family: "Dosis";
   src        : url('./font/Dosis.ttf');
 }
 
@@ -9,16 +9,17 @@
 }
 
 h1.about__title {
-  padding   : 10vh 0;
-  text-align: center;
-  font-size : 2vw;
+  font-family: "Dosis";
+  padding    : 10vh 0;
+  text-align : center;
+  font-size  : 2vw;
 }
 
 .about__main .about__me__content {
-  width      : 69%;
+  width      : 50%;
   margin     : 0 auto;
   font-size  : 18px;
-  font-family: Dosis;
+  font-family: "Dosis";
 }
 
 .about__main p {
