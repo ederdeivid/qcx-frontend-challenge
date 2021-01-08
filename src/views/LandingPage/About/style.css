@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Dosis";
   src        : url('./font/Dosis.ttf');
+  font-display: swap;
 }
 
 .about__main {
