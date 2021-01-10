@@ -2,7 +2,7 @@
   z-index          : 1;
   height           : 100vh;
   width            : 100%;
-  background-image : url('./img/bg-home.jpg');
+  background-image : url('https://raw.githubusercontent.com/ederdeivid/qcx-frontend-challenge/master/src/assets/img/bg-home.jpg');
   background-size  : cover;
   background-repeat: no-repeat;
 }
