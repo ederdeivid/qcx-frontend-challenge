@@ -1,10 +1,11 @@
 const fileinclude = require('gulp-file-include')
+const uglifycss = require('gulp-uglifycss')
 const webpack = require('webpack-stream')
 const browser = require('browser-sync')
 const concat = require('gulp-concat')
 const gulp = require('gulp')
 
-const unawalledFolders = ['!./node_modules/**', '!./dist/**', '!./gulpfile.js', '!**/services/**']
+const unawalledFolders = ['!./node_modules/**', '!./dist/**', '!./gulpfile.js', '!**/services/**', '!**/css/**']
 const server = browser.create()
 const paths = {
   scripts: {
@@ -21,6 +22,10 @@ const addWebpack = () => {
 
 const addCss = () => {
   return gulp.src(['**/*.css', ...unawalledFolders])
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
     .pipe(concat('main.css'))
     .pipe(gulp.dest(paths.scripts.dest))
 }
